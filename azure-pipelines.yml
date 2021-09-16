@@ -21,6 +21,7 @@ steps:
       # sonar.exclusions=**/*.bin
       sonar.projectKey=mypracticedemo_java_gan
       sonar.projectName=java_gan
+- task: SonarCloudAnalyze@1
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -33,4 +34,3 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
-- task: SonarCloudAnalyze@1
