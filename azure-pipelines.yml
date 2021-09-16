@@ -22,3 +22,15 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'samplejava'
+    organization: 'mypracticedemo'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=mypracticedemo_java_gan
+      sonar.projectName=java_gan
+- task: SonarCloudAnalyze@1
