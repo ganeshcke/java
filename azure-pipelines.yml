@@ -24,7 +24,7 @@ steps:
     sonarQubeRunAnalysis: false
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'samplejava'
+    SonarCloud: 'java'
     organization: 'mypracticedemo'
     scannerMode: 'Other'
     extraProperties: |
