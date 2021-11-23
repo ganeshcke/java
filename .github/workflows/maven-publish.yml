@@ -3,10 +3,7 @@
 
 name: Maven Package
 
-on:
-  create:
-  release:
-    types: [created]
+on: [push, pull_request]
 
 jobs:
   build:
